@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   },
+  "homepage": "https://souhagaa.github.io/react-state-matching-game",
   "scripts": {
     "start": "webpack-dev-server --open --mode development --env.entryDir=src",
     "start-refactor": "webpack-dev-server --open --mode development --env.entryDir=refactor",
@@ -14,7 +16,9 @@
     "test:module-2": "jest test/module-2/",
     "test:module-3": "jest test/module-3/",
     "test:module-4": "jest test/module-4/",
-    "test:module-5": "jest test/module-5/"
+    "test:module-5": "jest test/module-5/",
+    "deploy" : "gh-pages -b master -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
